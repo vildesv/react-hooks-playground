@@ -12,11 +12,10 @@ body {
   font-family: "Segoe UI", Arial, sans-serif;
   background-color: var(--bg-color);
   color: var(--primary-color);
+  overflow-x: hidden; /* viktig */
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
-  overflow-x: hidden;
 }
 
 h1 {
@@ -32,6 +31,7 @@ h1 {
   max-width: 1000px;
   padding: 2rem 1rem;
   justify-items: center;
+  box-sizing: border-box; 
 }
 
 @media (min-width: 600px) {
@@ -54,8 +54,10 @@ h1 {
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
   width: 100%;
   max-width: 450px;
+  min-width: 0; /* viktig for grid-overflow */
   text-align: center;
   transition: transform 0.2s ease;
+  box-sizing: border-box;
 }
 
 /* Cookie Clicker bilde */
@@ -163,6 +165,10 @@ button {
 
 button:hover {
   background: var(--hover-bg);
+}
+
+input, button {
+  box-sizing: border-box;
 }
 
 /* Feilmelding for Users-form */
