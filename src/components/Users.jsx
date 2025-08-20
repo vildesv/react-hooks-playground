@@ -18,9 +18,9 @@ function Users() {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const newErrors = { username: "", email: "" };
 
-    if (!username.trim()) newErrors.username = "Brukernavn kan ikke være tomt";
-    if (!email.trim()) newErrors.email = "E-post kan ikke være tomt";
-    else if (!emailRegex.test(email)) newErrors.email = "Ugyldig e-postadresse";
+    if (!username.trim()) newErrors.username = "Username can not be empty";
+    if (!email.trim()) newErrors.email = "Email can not be empty";
+    else if (!emailRegex.test(email)) newErrors.email = "Invalid email format";
 
     setErrors(newErrors);
 
@@ -44,12 +44,12 @@ function Users() {
           </li>
         ))}
       </ul>
-      <h3>Legg til ny bruker</h3>
+      <h3>Add new user</h3>
       <form onSubmit={addUser}>
         <div>
           <input
             type="text"
-            placeholder="Brukernavn"
+            placeholder="Username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             className={errors.username ? "invalid" : ""}
@@ -62,7 +62,7 @@ function Users() {
         <div>
           <input
             type="email"
-            placeholder="E-post"
+            placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className={errors.email ? "invalid" : ""}
@@ -72,7 +72,7 @@ function Users() {
           )}
         </div>
 
-        <button type="submit">Legg til</button>
+        <button type="submit">Add user</button>
       </form>
     </div>
   );
