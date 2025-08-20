@@ -161,7 +161,7 @@ input {
 }
 
 button {
-  background: var(--primary-color);
+  background: var(--secondary-color);
   color: white;
   border: none;
   padding: 0.5rem 1rem;
