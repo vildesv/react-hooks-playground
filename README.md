@@ -4,7 +4,7 @@ Dette prosjektet er laget som en øvelse i bruk av **React Hooks** (`useState` o
 
 Prosjektet består av tre komponenter:
 
-### 1. CookieClicker
+### 1. CookieClicker 🍪
 **Beskrivelse:** En enkel komponent hvor brukeren kan trykke på en "kjeks"-knapp for å samle poeng.  
 
 **Funksjonalitet:**
@@ -14,7 +14,7 @@ Prosjektet består av tre komponenter:
 
 ---
 
-### 2. CatFacts
+### 2. CatFacts 🐱
 **Beskrivelse:** Henter og viser tilfeldige kattfakta fra et API.  
 
 **Funksjonalitet:**
@@ -27,7 +27,7 @@ Prosjektet består av tre komponenter:
 
 ---
 
-### 3. Users
+### 3. Users 👥
 **Beskrivelse:** Viser en liste over brukere og gir mulighet til å legge til nye brukere.  
 
 **Funksjonalitet:**
