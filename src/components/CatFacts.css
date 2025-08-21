@@ -1,0 +1,68 @@
+.catfacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.catfacts h2 {
+  margin-bottom: 1rem;
+}
+
+/* Lista med fakta */
+.catfacts ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;          
+  margin-top: 1rem;
+  text-align: left;
+  overflow-y: auto;
+  max-height: 300px;
+
+  /* Minimalistisk scrollbar for Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary-color) transparent;
+}
+
+/* Minimalistisk scrollbar for Chrome, Edge, Safari */
+.catfacts ul::-webkit-scrollbar {
+  width: 6px;
+}
+
+.catfacts ul::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.catfacts ul::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-color);
+  border-radius: 3px;
+}
+
+.catfacts ul::-webkit-scrollbar-thumb:hover {
+  background-color: #69728e;
+}
+
+.catfacts li {
+  margin-bottom: 0.5rem;
+}
+
+/* Knapp for nye fakta */
+.new-facts-btn {
+  margin-top: 1.5rem;
+  background: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.new-facts-btn:hover {
+  background: var(--hover-bg);
+}
+
+.loading-text {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+  font-style: italic;
+}

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Users.css";
 
 const mockData = [
   { username: "Ola Normann", email: "ola.normann@norge.no" },
@@ -24,14 +25,17 @@ function Users() {
 
     setErrors(newErrors);
 
-    // Sjekk om det er noen feil
     if (!newErrors.username && !newErrors.email) {
-      const newUser = { username, email };
+      const newUser = { username, email, isNew: true };
       setUsers([...users, newUser]);
       setUsername("");
       setEmail("");
       setErrors({ username: "", email: "" });
     }
+  };
+
+  const deleteUser = (email) => {
+    setUsers(users.filter((user) => user.email !== email));
   };
 
   return (
@@ -40,10 +44,19 @@ function Users() {
       <ul>
         {users.map((user) => (
           <li key={user.email}>
-            <strong>{user.username}</strong> - {user.email}
+            <strong className="username">{user.username}</strong> - {user.email}
+            {user.isNew && (
+              <button
+                className="delete-btn"
+                onClick={() => deleteUser(user.email)}
+              >
+                Delete
+              </button>
+            )}
           </li>
         ))}
       </ul>
+
       <h3>Add new user</h3>
       <form onSubmit={addUser}>
         <div>
